@@ -1,4 +1,4 @@
-# counter + Redux
+# counter + React
 ## 
 # npm run dev
-## - a counter using redux
+## 
