@@ -1,7 +1,5 @@
-import { useSelector, useDispatch } from "react-redux"
-import { inc, dec } from './actions'
+import { useState } from "react"
 import './App.css'
-
 
 
  function App() {
