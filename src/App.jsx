@@ -4,21 +4,26 @@ import './App.css'
 
 
 
-function App() {
-   
-  const counter = useSelector((state) => state.counter )
-  const dispatch = useDispatch()
+ function App() {
+    const [count, setCount] = useState(0)
 
+    const inc = () => {
+      setCount( count + 1)
+    }
 
-  return(
-    <>
-    <div className="App">
-      <h1>Counter:{counter}</h1>
-      <button onClick={() => dispatch(inc())}>Increment</button>
-      <button onClick={() => dispatch(dec())}>Decrement</button>
-    </div>
-    </>
-  )
-}
+    const dec = () => {
+      setCount( count - 1 )
+    }
 
-export default App
+   return(
+     <>
+     <div className="App">
+       <h1>Counter:{count}</h1>
+       <button onClick={inc}>Increment</button>
+       <button onClick={dec}>Decrement</button>
+     </div>
+     </>
+   )
+ }
+
+ export default App
